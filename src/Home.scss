@@ -1,0 +1,23 @@
+.home {
+	background-color: #282c34;
+	min-height: 95vh;
+	// vv Are these lines necessary?
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: calc(10px + 2vmin);
+	// ^^ Are these lines necessary?
+	color: #82a284;
+}
+
+.other-colors {
+	// color: #282c34; // dark grey (original)
+	// color: #293462; // midnight blue
+	// color: #92b4ec; // light blue
+	// color: #f8cb2e; // yellow
+	// color: #ec9b3b; // orange
+	// color: #446a46; // dark green
+	// color: #82a284; // light green
+	// color: #61dafb; // light blue (original)
+}

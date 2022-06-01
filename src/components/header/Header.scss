@@ -1,0 +1,16 @@
+nav {
+	min-height: 5vh;
+	display: flex;
+	align-items: center;
+	background-color: #282c34;
+	color: #82a284;
+	a {
+		margin: 0 12px;
+		color: #82a284;
+		transition: color 0.2s linear;
+		&:hover,
+		&:focus-visible {
+			color: #446a46;
+		}
+	}
+}
