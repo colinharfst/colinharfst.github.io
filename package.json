@@ -1,6 +1,6 @@
 {
 	"name": "colin-pages-project",
-	"homepage": "https://colinharfst.github.io/",
+	"homepage": "https://colinharfst.github.io",
 	"version": "0.1.0",
 	"private": true,
 	"dependencies": {
