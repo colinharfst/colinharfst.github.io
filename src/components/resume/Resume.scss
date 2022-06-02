@@ -1,6 +1,7 @@
-.resume {
+.resume-pdf-wrapper {
 	background-color: #282c34;
 	min-height: 95vh;
+	height: 95vh;
 	display: flex;
 	flex-direction: column;
 	text-align: center;
@@ -8,4 +9,24 @@
 	justify-content: center;
 	font-size: calc(10px + 2vmin);
 	color: #82a284;
+	.resume {
+		height: 100%;
+	}
+	h3 {
+		margin: 20px 0;
+	}
+	img {
+		width: 60vw;
+		height: auto;
+		border: 1.5px solid #82a284;
+		border-radius: 4px;
+	}
+}
+
+@media only screen and (max-width: 675px) {
+	.resume-pdf-wrapper {
+		img {
+			width: 90vw;
+		}
+	}
 }
