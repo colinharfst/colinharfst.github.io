@@ -53,11 +53,11 @@ function Timeline() {
 	const renderLifeEvent = (e, ind) => {
 		return (
 			<div
-				className={`event ${verticalDistance(e, ind !== 0 && timeline[ind - 1]) === 0 && "simul-event"}`}
+				className="event"
 				key={ind}
 				style={{
 					marginTop:
-						ind === 0 ? `${distanceFromPresent(e) * 180}px` : `${verticalDistance(e, timeline[ind - 1]) * 180}px`,
+						ind === 0 ? `${distanceFromPresent(e) * 180}px` : `${verticalDistance(e, timeline[ind - 1]) * 180 - 110}px`,
 					alignSelf: ind === timeline.length - 1 ? "center" : ind % 2 === 0 ? "flex-start" : "flex-end",
 				}}
 			>
