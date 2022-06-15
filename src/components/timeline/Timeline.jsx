@@ -35,6 +35,17 @@ function Timeline() {
 	// 	return years + months / 12;
 	// };
 
+	const distanceFromPresent = e => {
+		const now = new Date();
+		console.log(now);
+		const y = now.getFullYear();
+		const m = now.getMonth() + 1;
+		const years = y - e.year;
+		const months = m - monthNumDict[e.month];
+		console.log(years, months, e.year, e.month);
+		return years + months / 12;
+	};
+
 	const verticalDistance = (e1, e2) => {
 		const years = e2.year - e1.year;
 		const months = monthNumDict[e2.month] - monthNumDict[e1.month];
@@ -47,7 +58,8 @@ function Timeline() {
 				className="event"
 				key={ind}
 				style={{
-					marginTop: ind === 0 ? "0px" : `${verticalDistance(e, timeline[ind - 1]) * 180 - 110}px`,
+					marginTop:
+						ind === 0 ? `${distanceFromPresent(e) * 180}px` : `${verticalDistance(e, timeline[ind - 1]) * 180 - 110}px`,
 					alignSelf: ind === timeline.length - 1 ? "center" : ind % 2 === 0 ? "flex-start" : "flex-end",
 				}}
 			>
@@ -59,11 +71,13 @@ function Timeline() {
 
 	return (
 		<div className="timeline-container">
-			<div className="present-moment" />
+			<div className="present-moment">
+				<h3>Present</h3>
+				<h3>moment</h3>
+			</div>
 			<div className="timeline">
 				<span className="line" />
 				{timeline.map((e, ind) => renderLifeEvent(e, ind))}
-				{/* <span className="line">{timeline.map((e, ind) => renderLifeEvent(e, ind))}</span> */}
 			</div>
 		</div>
 	);

@@ -1,7 +1,8 @@
 .timeline-container {
 	background-color: #282c34;
 	min-height: 95vh;
-	padding-bottom: 65px;
+	padding-top: 55px;
+	padding-bottom: 55px;
 	display: flex;
 	flex-direction: column;
 	text-align: center;
@@ -10,8 +11,35 @@
 	color: #82a284;
 
 	.present-moment {
-		height: 110px;
+		height: 100%;
 		width: 360px;
+		border: 2px solid #82a284;
+		border-radius: 6px;
+		position: relative;
+
+		&::before {
+			content: "";
+			display: block;
+			position: absolute;
+			bottom: -10px;
+			left: 171px;
+			height: 16px;
+			width: 16px;
+			border-bottom: 2px solid #82a284;
+			border-right: 2px solid #82a284;
+			background-color: #282c34;
+			transform: rotate(45deg);
+		}
+
+		@media (max-width: 800px) {
+			zoom: 75%;
+		}
+		@media (max-width: 600px) {
+			zoom: 55%;
+		}
+		@media (max-width: 455px) {
+			zoom: 48%;
+		}
 	}
 
 	.timeline {
@@ -22,6 +50,17 @@
 		align-items: center;
 		justify-content: center;
 		position: relative;
+		margin-top: 11px;
+
+		@media (max-width: 800px) {
+			zoom: 75%;
+		}
+		@media (max-width: 600px) {
+			zoom: 55%;
+		}
+		@media (max-width: 455px) {
+			zoom: 48%;
+		}
 
 		.line {
 			height: calc(100% - 110px);
