@@ -52,7 +52,7 @@ function Timeline() {
 				style={{
 					marginTop:
 						ind === 0
-							? distanceFromPresent(e) > 2 / 12
+							? distanceFromPresent(e) > 3 / 12
 								? `${distanceFromPresent(e) * 180 - 55}px`
 								: `${distanceFromPresent(e) * 180}px` // Look good at the cost of accuracy
 							: `${verticalDistance(e, timeline[ind - 1]) * 180 - 110}px`,
