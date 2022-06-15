@@ -1,6 +1,7 @@
 .timeline-container {
 	background-color: #282c34;
 	min-height: 95vh;
+	padding-bottom: 65px;
 	display: flex;
 	flex-direction: column;
 	text-align: center;
@@ -45,7 +46,7 @@
 					content: "";
 					display: block;
 					position: absolute;
-					top: 55px;
+					top: 44px;
 					left: -11px;
 					height: 16px;
 					width: 16px;
@@ -63,7 +64,7 @@
 					content: "";
 					display: block;
 					position: absolute;
-					top: 55px;
+					top: 44px;
 					right: -10px;
 					height: 16px;
 					width: 16px;
