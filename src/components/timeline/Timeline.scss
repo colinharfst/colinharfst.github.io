@@ -115,6 +115,8 @@
 			}
 
 			&:last-of-type {
+				align-self: center !important;
+
 				&::before {
 					content: "";
 					display: block;
@@ -132,9 +134,11 @@
 				&::after {
 					display: none;
 				}
-
-				align-self: center !important;
 			}
+		}
+
+		.simul-event {
+			margin-top: -110px !important;
 		}
 	}
 }
