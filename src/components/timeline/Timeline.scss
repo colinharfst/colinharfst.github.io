@@ -11,18 +11,22 @@
 	color: #82a284;
 
 	.present-moment {
-		height: 100%;
-		width: 360px;
+		height: 106px;
+		max-width: 360px;
+		width: calc((100% - 4px - 4px - 22.6px) / 2 - 2px);
 		border: 2px solid #82a284;
 		border-radius: 6px;
 		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 
 		&::before {
 			content: "";
 			display: block;
 			position: absolute;
-			bottom: -10px;
-			left: 171px;
+			bottom: -11px + 0.5px;
+			left: calc(50% - 11px + 2px);
 			height: 16px;
 			width: 16px;
 			border-bottom: 2px solid #82a284;
@@ -32,18 +36,15 @@
 		}
 
 		@media (max-width: 800px) {
-			zoom: 75%;
-		}
-		@media (max-width: 600px) {
-			zoom: 55%;
-		}
-		@media (max-width: 455px) {
-			zoom: 48%;
+			h3 {
+				font-size: 1em;
+			}
 		}
 	}
 
 	.timeline {
 		min-height: 95vh;
+		max-width: 100%;
 		width: calc((364px + 11px) * 2 + 4px + 2px);
 		display: flex;
 		flex-direction: column;
@@ -51,16 +52,6 @@
 		justify-content: center;
 		position: relative;
 		margin-top: 11px;
-
-		@media (max-width: 800px) {
-			zoom: 75%;
-		}
-		@media (max-width: 600px) {
-			zoom: 55%;
-		}
-		@media (max-width: 455px) {
-			zoom: 48%;
-		}
 
 		.line {
 			height: calc(100% - 110px);
@@ -73,10 +64,14 @@
 		}
 
 		.event {
-			height: 100%; // about 110px rn
-			width: 360px;
+			height: 106px;
+			max-width: 360px;
+			width: calc((100% - 4px - 4px - 22px) / 2 - 2px);
 			border: 2px solid #82a284;
 			border-radius: 6px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
 
 			&:nth-of-type(even) {
 				position: relative;
@@ -85,14 +80,18 @@
 					content: "";
 					display: block;
 					position: absolute;
-					top: 44px;
-					left: -11px;
+					top: calc(50% - 11px);
+					left: -11px + 0.5px;
 					height: 16px;
 					width: 16px;
 					border-top: 2px solid #82a284;
 					border-left: 2px solid #82a284;
 					background-color: #282c34;
 					transform: rotate(-45deg);
+
+					@media (max-width: 800px) {
+						left: -11px;
+					}
 				}
 			}
 
@@ -103,8 +102,8 @@
 					content: "";
 					display: block;
 					position: absolute;
-					top: 44px;
-					right: -10px;
+					top: calc(50% - 11px);
+					right: -11px + 0.5px;
 					height: 16px;
 					width: 16px;
 					border-top: 2px solid #82a284;
@@ -115,12 +114,14 @@
 			}
 
 			&:last-of-type {
+				align-self: center !important;
+
 				&::before {
 					content: "";
 					display: block;
 					position: absolute;
 					top: -11px;
-					left: 171px;
+					left: calc(50% - 11px + 2px);
 					height: 16px;
 					width: 16px;
 					border-top: 2px solid #82a284;
@@ -132,8 +133,12 @@
 				&::after {
 					display: none;
 				}
+			}
 
-				align-self: center !important;
+			@media (max-width: 800px) {
+				h3 {
+					font-size: 1em;
+				}
 			}
 		}
 	}
