@@ -14,7 +14,7 @@ root.render(
 		<BrowserRouter>
 			<Header />
 			<Routes>
-				<Route path="/" element={<Home />} />
+				<Route path="*" element={<Home />} />
 				<Route path="/resume" element={<Resume />} />
 				<Route path="/timeline" element={<Timeline />} />
 			</Routes>
