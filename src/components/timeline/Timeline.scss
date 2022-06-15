@@ -10,6 +10,13 @@
 	justify-content: center;
 	color: #82a284;
 
+	h3 {
+		margin: auto;
+		@media (max-width: 800px) {
+			font-size: 1em;
+		}
+	}
+
 	.present-moment {
 		height: 106px;
 		max-width: 360px;
@@ -33,12 +40,6 @@
 			border-right: 2px solid #82a284;
 			background-color: #282c34;
 			transform: rotate(45deg);
-		}
-
-		@media (max-width: 800px) {
-			h3 {
-				font-size: 1em;
-			}
 		}
 	}
 
@@ -132,12 +133,6 @@
 
 				&::after {
 					display: none;
-				}
-			}
-
-			@media (max-width: 800px) {
-				h3 {
-					font-size: 1em;
 				}
 			}
 		}
