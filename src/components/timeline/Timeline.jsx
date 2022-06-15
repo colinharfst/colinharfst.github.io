@@ -37,12 +37,10 @@ function Timeline() {
 
 	const distanceFromPresent = e => {
 		const now = new Date();
-		console.log(now);
 		const y = now.getFullYear();
 		const m = now.getMonth() + 1;
 		const years = y - e.year;
 		const months = m - monthNumDict[e.month];
-		console.log(years, months, e.year, e.month);
 		return years + months / 12;
 	};
 
