@@ -29,12 +29,6 @@ function Timeline() {
 		Dec: 12,
 	};
 
-	// const verticalDistance = e => {
-	// 	const years = e.year - 1995;
-	// 	const months = monthNumDict[e.month] - 11;
-	// 	return years + months / 12;
-	// };
-
 	const distanceFromPresent = e => {
 		const now = new Date();
 		const y = now.getFullYear();
@@ -57,7 +51,11 @@ function Timeline() {
 				key={ind}
 				style={{
 					marginTop:
-						ind === 0 ? `${distanceFromPresent(e) * 180}px` : `${verticalDistance(e, timeline[ind - 1]) * 180 - 110}px`,
+						ind === 0
+							? distanceFromPresent(e) > 2 / 12
+								? `${distanceFromPresent(e) * 180 - 55}px`
+								: `${distanceFromPresent(e) * 180}px` // Look good at the cost of accuracy
+							: `${verticalDistance(e, timeline[ind - 1]) * 180 - 110}px`,
 					alignSelf: ind === timeline.length - 1 ? "center" : ind % 2 === 0 ? "flex-start" : "flex-end",
 				}}
 			>
