@@ -1,4 +1,4 @@
-.resume-pdf-wrapper {
+.research-pdf-wrapper {
 	background-color: #282c34;
 	height: max(95vh, 100%);
 	display: flex;
@@ -7,22 +7,23 @@
 	align-items: center;
 	font-size: calc(10px + 2vmin);
 	color: #82a284;
-	.resume {
+	.research {
 		min-height: 95vh;
 	}
 	h3 {
 		margin: 20px 0;
 	}
 	img {
-		width: 60vw;
+		width: 45vw;
 		height: auto;
 		border: 1.5px solid #82a284;
 		border-radius: 4px;
+		margin: 0 4px;
 	}
 }
 
 @media only screen and (max-width: 675px) {
-	.resume-pdf-wrapper {
+	.research-pdf-wrapper {
 		img {
 			width: 90vw;
 		}

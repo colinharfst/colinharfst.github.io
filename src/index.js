@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./index.scss";
 import Home from "./Home";
 import Resume from "./components/resume/Resume";
+import Research from "./components/research/Research";
 import Timeline from "./components/timeline/Timeline";
 import Header from "./components/header/Header";
 import reportWebVitals from "./reportWebVitals";
@@ -16,6 +17,7 @@ root.render(
 			<Routes>
 				<Route path="*" element={<Home />} />
 				<Route path="/resume" element={<Resume />} />
+				<Route path="/research" element={<Research />} />
 				<Route path="/timeline" element={<Timeline />} />
 			</Routes>
 		</BrowserRouter>

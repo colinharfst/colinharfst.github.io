@@ -4,6 +4,7 @@ function Timeline() {
 	document.title = "Colin Harfst - Timeline";
 
 	const timeline = [
+		{ year: 2022, month: "Dec", event: "Moved to Seattle" },
 		{ year: 2022, month: "May", event: "We got engaged!" },
 		{ year: 2022, month: "Feb", event: "Left DC for the road" },
 		{ year: 2020, month: "May", event: "Moved to DC" },
